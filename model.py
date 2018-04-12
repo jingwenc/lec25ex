@@ -21,9 +21,9 @@ def get_entries():
 def add_entry(name, text):
     global entries, GUESTBOOK_ENTRIES_FILE
     now = datetime.now()
-    time_string = now.strftime("%b %d, %Y %-I:%M %p")
+    # time_string = now.strftime("%b %d, %Y %-I:%M %p")
     # if you have an error using this format, just use
-    # time_string = str(now)
+    time_string = str(now)
     entry = {"author": name, "text": text, "timestamp": time_string}
     entries.insert(0, entry) ## add to front of list
     try:
